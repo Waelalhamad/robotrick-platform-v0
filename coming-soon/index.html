@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon - RoboTrick | Innovation in Robotics</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="RoboTrick is launching soon! Join us on our journey to revolutionize robotics and automation. Stay tuned for exciting innovations."
+    />
+    <meta
+      name="keywords"
+      content="robotics, automation, RoboTrick, technology, innovation, coming soon"
+    />
+    <meta name="author" content="RoboTrick" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Coming Soon - RoboTrick | Innovation in Robotics"
+    />
+    <meta
+      property="og:description"
+      content="RoboTrick is launching soon! Join us on our journey to revolutionize robotics and automation."
+    />
+    <meta property="og:image" content="https://robotrick.net/assets/logo.png" />
+    <meta property="og:url" content="https://robotrick.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RoboTrick" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Coming Soon - RoboTrick | Innovation in Robotics"
+    />
+    <meta
+      name="twitter:description"
+      content="RoboTrick is launching soon! Join us on our journey to revolutionize robotics and automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://robotrick.net/assets/logo.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://robotrick.net/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/O.svg" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JZZ5RPMDBG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JZZ5RPMDBG");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-green": "#00ff88",
+              "brand-dark": "#0a0f0d",
+            },
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-out forwards",
+              "slide-up": "slideUp 1s ease-out forwards",
+              "pulse-glow": "pulseGlow 2.5s infinite ease-in-out",
+              float: "float 4s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              slideUp: {
+                "0%": { opacity: 0, transform: "translateY(30px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" },
+              },
+              pulseGlow: {
+                "0%, 100%": { textShadow: "0 0 10px #00ff88" },
+                "50%": { textShadow: "0 0 25px #00ff88" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 15, 13, 0.75);
+        z-index: -1;
+      }
+      canvas#particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+      }
+
+      #preloader {
+        transition: opacity 0.75s ease;
+      }
+      #preloader.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #main-content {
+        opacity: 0;
+        transition: opacity 1s ease 0.5s;
+      }
+      #main-content.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans overflow-hidden" role="main">
+    <div
+      id="preloader"
+      class="fixed top-0 left-0 w-full h-full bg-brand-dark flex justify-center items-center z-50"
+    >
+      <div class="text-brand-green text-lg animate-pulse">Loading...</div>
+    </div>
+    <canvas id="particles"></canvas>
+
+    <div
+      id="main-content"
+      class="relative min-h-screen flex flex-col items-center justify-center text-center space-y-12 px-4"
+    >
+      <div class="animate-fade-in">
+        <img
+          src="./assets/logo.png"
+          alt="RoboTrick Logo"
+          class="mx-auto w-72 md:w-96 drop-shadow-lg animate-float"
+        />
+      </div>
+
+      <div class="animate-slide-up">
+        <h1
+          id="main-heading"
+          class="text-5xl md:text-7xl font-extrabold tracking-wide animate-pulse-glow"
+        >
+          Coming Soon
+        </h1>
+      </div>
+
+      <div
+        id="countdown-container"
+        class="animate-slide-up delay-300 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl px-6 py-8"
+      >
+        <div class="grid grid-cols-4 gap-6 md:gap-10">
+          <div class="text-center">
+            <div
+              id="days"
+              class="text-3xl md:text-5xl font-semibold text-brand-green"
+            >
+              00
+            </div>
+            <p class="uppercase text-gray-300 text-sm mt-1">Days</p>
+          </div>
+          <div class="text-center">
+            <div
+              id="hours"
+              class="text-3xl md:text-5xl font-semibold text-brand-green"
+            >
+              00
+            </div>
+            <p class="uppercase text-gray-300 text-sm mt-1">Hours</p>
+          </div>
+          <div class="text-center">
+            <div
+              id="minutes"
+              class="text-3xl md:text-5xl font-semibold text-brand-green"
+            >
+              00
+            </div>
+            <p class="uppercase text-gray-300 text-sm mt-1">Minutes</p>
+          </div>
+          <div class="text-center">
+            <div
+              id="seconds"
+              class="text-3xl md:text-5xl font-semibold text-brand-green"
+            >
+              00
+            </div>
+            <p class="uppercase text-gray-300 text-sm mt-1">Seconds</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 space-y-4 animate-slide-up delay-500">
+        <div class="flex justify-center space-x-6">
+          <a
+            href="https://www.facebook.com/profile.php?id=61561504957102"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Facebook page"
+            class="text-gray-400 hover:text-brand-green transition transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2 focus:ring-offset-brand-dark rounded"
+          >
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/robo_trick01/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Instagram"
+            class="text-gray-400 hover:text-brand-green transition transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2 focus:ring-offset-brand-dark rounded"
+          >
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a
+            href="https://wa.me/+963942060440"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp"
+            class="text-gray-400 hover:text-brand-green transition transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2 focus:ring-offset-brand-dark rounded"
+          >
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/robotrick-co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Connect with us on LinkedIn"
+            class="text-gray-400 hover:text-brand-green transition transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2 focus:ring-offset-brand-dark rounded"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+        <p class="text-gray-500 text-xs">
+          © 2025 RoboTrick. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
+        const mainContent = document.getElementById("main-content");
+        const bgImage = new Image();
+
+        bgImage.src = "./assets/background.png";
+
+        bgImage.onload = function () {
+          document.body.style.backgroundImage = `url(${bgImage.src})`;
+
+          setTimeout(() => {
+            preloader.classList.add("hidden");
+            mainContent.classList.add("visible");
+            initCountdown();
+          }, 500);
+        };
+
+        bgImage.onerror = function () {
+          console.error("Failed to load background image");
+          preloader.classList.add("hidden");
+          mainContent.classList.add("visible");
+          initCountdown();
+        };
+      });
+
+      function initCountdown() {
+        const target = new Date("2026-02-02T23:59:59Z");
+
+        if (isNaN(target.getTime())) {
+          console.error("Invalid countdown target date:", target);
+          document.getElementById("countdown-container").innerHTML =
+            '<p class="text-xl md:text-2xl text-red-400 font-semibold">Countdown date error</p>';
+        } else {
+          const targetTime = target.getTime();
+
+          function updateCountdown() {
+            const now = Date.now(),
+              diff = targetTime - now;
+
+            if (diff > 0) {
+              const days = Math.floor(diff / 864e5),
+                hours = Math.floor((diff % 864e5) / 36e5),
+                minutes = Math.floor((diff % 36e5) / 6e4),
+                seconds = Math.floor((diff % 6e4) / 1e3);
+
+              document.getElementById("days").textContent = String(
+                days
+              ).padStart(2, "0");
+              document.getElementById("hours").textContent = String(
+                hours
+              ).padStart(2, "0");
+              document.getElementById("minutes").textContent = String(
+                minutes
+              ).padStart(2, "0");
+              document.getElementById("seconds").textContent = String(
+                seconds
+              ).padStart(2, "0");
+            } else {
+              document.getElementById("main-heading").textContent =
+                "We're Live!";
+              document.getElementById("countdown-container").innerHTML =
+                '<p class="text-xl md:text-2xl text-brand-green font-semibold">Thank you for your patience. We\'re now live!</p>';
+              clearInterval(countdownInterval);
+            }
+          }
+
+          const countdownInterval = setInterval(updateCountdown, 1000);
+          updateCountdown();
+        }
+      }
+
+      const canvas = document.getElementById("particles"),
+        ctx = canvas.getContext("2d");
+      (canvas.width = window.innerWidth), (canvas.height = window.innerHeight);
+      const particles = [];
+      for (let e = 0; e < 60; e++)
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: 2 * Math.random(),
+          dx: 0.5 * (Math.random() - 0.5),
+          dy: 0.5 * (Math.random() - 0.5),
+        });
+      function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height),
+          particles.forEach((e) => {
+            ctx.beginPath(),
+              ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI),
+              (ctx.fillStyle = "rgba(0, 255, 136, 0.6)"),
+              ctx.fill(),
+              (e.x += e.dx),
+              (e.y += e.dy),
+              (e.x < 0 || e.x > canvas.width) && (e.dx *= -1),
+              (e.y < 0 || e.y > canvas.height) && (e.dy *= -1);
+          }),
+          requestAnimationFrame(drawParticles);
+      }
+      drawParticles();
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+  </body>
+</html>
