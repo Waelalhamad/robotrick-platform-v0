@@ -1,10 +1,10 @@
-# Robotric
+# Robotrick
 
 > A comprehensive robotics and AI platform for managing training programs, competitions, teams, projects, and inventory management.
 
 ## Overview
 
-Robotric is a full-stack web application designed to serve as a hub for professional robotics training, technical project management, and 3D printing services. Built for the Syrian robotics community based in Aleppo, it provides a complete ecosystem for managing educational programs, team collaborations, competitions, and inventory tracking.
+Robotrick is a full-stack web application designed to serve as a hub for professional robotics training, technical project management, and 3D printing services. Built for the Syrian robotics community based in Aleppo, it provides a complete ecosystem for managing educational programs, team collaborations, competitions, and inventory tracking.
 
 ### Key Features
 
@@ -29,7 +29,6 @@ Robotric is a full-stack web application designed to serve as a hub for professi
 | **Vite** | 7.1.2 | Build tool & dev server |
 | **TailwindCSS** | 4.1.12 | Utility-first styling |
 | **Framer Motion** | 12.23.22 | Animation library |
-| **Three.js / React Three Fiber** | - | 3D graphics |
 | **React Router** | 7.8.2 | Client-side routing |
 | **Axios** | 1.7.9 | HTTP client |
 | **Socket.io Client** | 4.8.1 | Real-time communication |
@@ -73,7 +72,7 @@ Robotric is a full-stack web application designed to serve as a hub for professi
 ### Project Structure
 
 ```
-Robotric-main/
+Robotrick-main/
 ├── client/                 # React frontend
 │   ├── src/
 │   │   ├── components/    # Reusable UI components
@@ -101,14 +100,8 @@ Robotric-main/
 │   │   ├── middleware/    # Auth, validation, error handling
 │   │   ├── services/      # Business logic layer
 │   │   └── utils/         # Helper functions (logger, validators)
-│   ├── uploads/           # User-uploaded files
 │   ├── index.js           # Server entry point
 │   └── package.json
-│
-├── test/                  # Testing assets & pages
-├── brand/                 # Design assets (logos, fonts)
-├── docs/                  # Project documentation
-└── CLAUDE.md             # AI assistant project guide
 ```
 
 ### Database Models (33 Collections)
@@ -164,87 +157,6 @@ DELETE /api/resource/:id   # Delete
 ```
 
 ---
-
-## Getting Started
-
-### Prerequisites
-
-- **Node.js** (v16 or higher)
-- **MongoDB** (local or cloud instance)
-- **npm** or **yarn**
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd Robotric-main
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install root dependencies
-   npm install
-
-   # Install client dependencies
-   cd client && npm install
-
-   # Install server dependencies
-   cd ../server && npm install
-   ```
-
-3. **Environment Configuration**
-
-   **Server (.env):**
-   ```env
-   # MongoDB
-   MONGODB_URI=mongodb://localhost:27017/robotric
-
-   # JWT
-   JWT_SECRET=your-secret-key-here
-   JWT_EXPIRES_IN=7d
-
-   # Server
-   PORT=5000
-   NODE_ENV=development
-
-   # CORS
-   CLIENT_URL=http://localhost:5173
-
-   # File Uploads
-   UPLOAD_DIR=./uploads
-   MAX_FILE_SIZE=10485760
-   ```
-
-   **Client (.env):**
-   ```env
-   VITE_API_URL=http://localhost:5000/api
-   VITE_SOCKET_URL=http://localhost:5000
-   ```
-
-4. **Initialize Database**
-   ```bash
-   cd server
-   npm run seed:admin
-   ```
-
-5. **Start Development Servers**
-   ```bash
-   # From root directory
-   npm run dev
-
-   # Or individually:
-   npm run client    # Frontend only
-   npm run server    # Backend only
-   ```
-
-6. **Access the Application**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5000/api
-
----
-
-## Development Guide
 
 ### Code Standards
 
@@ -361,59 +273,6 @@ npm run start        # Production start
 npm run seed:admin   # Initialize admin user
 ```
 
----
-
-## Deployment
-
-**Frontend (Vercel):**
-- Automatically deploys from main branch
-- Configure environment variables in Vercel dashboard
-
-**Backend (Render):**
-- Configuration: `render.yaml`
-- Set environment variables in Render dashboard
-- MongoDB Atlas recommended for production database
-
----
-
-## Contributing
-
-### Workflow
-
-1. Create a feature branch
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. Make your changes following code standards
-
-3. Test thoroughly
-   - Check TypeScript compilation: `npx tsc --noEmit`
-   - Test in browser
-   - Verify API endpoints
-
-4. Commit with descriptive messages
-   ```bash
-   git commit -m "feat: add user profile editing"
-   ```
-
-5. Push and create pull request
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-### Commit Message Convention
-
-- `feat:` New feature
-- `fix:` Bug fix
-- `docs:` Documentation changes
-- `style:` Code style changes (formatting)
-- `refactor:` Code refactoring
-- `test:` Adding or updating tests
-- `chore:` Maintenance tasks
-
----
-
 ## Project Status
 
 **Current Phase:** Premium redesign Phase 1-2 complete
@@ -430,27 +289,14 @@ npm run seed:admin   # Initialize admin user
 
 **Future Enhancements:**
 - Mobile app (React Native/Expo ready)
-- Advanced analytics dashboard
 - Automated email notifications
 - Multi-language support
-- AI-powered recommendations
+- AI-powered Dashboard
 
 ---
 
 ## License
 
-© 2025 RoboTrick. All rights reserved.
-
----
-
-## Contact
-
-For questions or support, reach out via:
-- **Facebook:** [RoboTrick](https://www.facebook.com/profile.php?id=61561504957102)
-- **Instagram:** [@robo_trick01](https://www.instagram.com/robo_trick01/)
-- **LinkedIn:** [RoboTrick Company](https://www.linkedin.com/company/robotrick-co/)
-- **WhatsApp:** +963942060440
-
----
+© 2025 Robotrickk. All rights reserved.
 
 **Built with dedication for the robotics community in Syria 🇸🇾**
