@@ -531,8 +531,8 @@ const EnrollmentManagement: React.FC = () => {
                 {selectedEnrollment?.student.name.charAt(0).toUpperCase()}
               </div>
               <div>
-                <p className="font-bold text-zinc-900 text-lg">{selectedEnrollment?.student.name}</p>
-                <p className="text-sm text-zinc-600 font-medium">{selectedEnrollment?.course.title}</p>
+                <p className="font-bold text-zinc-900 text-lg">{selectedEnrollment?.student?.name}</p>
+                <p className="text-sm text-zinc-600 font-medium">{selectedEnrollment?.course?.title || 'Course'}</p>
               </div>
             </div>
 

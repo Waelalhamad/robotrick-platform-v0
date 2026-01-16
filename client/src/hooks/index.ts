@@ -1,5 +1,4 @@
-export * from './useAuth';
-export * from './useApi';
+ export { useAuth } from '../providers/AuthProvider';
 export * from './useDebounce';
 export * from './useDashboardStats';
 export * from './useRealtimeUpdates';
